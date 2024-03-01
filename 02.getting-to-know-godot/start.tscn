@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dfrp0km2xjcr6"]
+[gd_scene load_steps=10 format=3 uid="uid://dfrp0km2xjcr6"]
 
 [ext_resource type="Script" path="res://game.gd" id="2"]
 [ext_resource type="TileSet" uid="uid://crkgfdw1y80hc" path="res://levels/rooms/tileset_bridges.tres" id="2_vnf5n"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://cu2rb5dl4ljte" path="res://levels/rooms/room_a.tscn" id="5_v6san"]
 [ext_resource type="PackedScene" uid="uid://dgayuh42w4v6u" path="res://levels/rooms/room_b.tscn" id="6_cpbf6"]
 [ext_resource type="PackedScene" uid="uid://cq0mmphkbrvmm" path="res://levels/rooms/room_c.tscn" id="7_73eaf"]
+[ext_resource type="PackedScene" uid="uid://wdey00p3syru" path="res://levels/background/background_blue_sky.tscn" id="8_liu0f"]
+[ext_resource type="PackedScene" uid="uid://cce7r30dfjm4r" path="res://interface/bars/ui_health_bar.tscn" id="9_hlrxm"]
 
 [node name="Start" type="Node2D"]
 script = ExtResource("2")
@@ -22,6 +24,7 @@ metadata/_edit_lock_ = true
 tile_set = ExtResource("3")
 format = 2
 layer_0/name = "Invisible walls"
+layer_0/tile_data = PackedInt32Array(393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 393232, 0, 0, 327693, 0, 0, 262157, 0, 0, 196621, 0, 0, 196620, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 655376, 0, 0, 655375, 0, 0, 589839, 0, 0, 196632, 0, 0, 65560, 0, 0, 24, 0, 0, -65512, 0, 0, 131096, 0, 0, 196634, 0, 0, 131098, 0, 0, 65562, 0, 0, 26, 0, 0, -65510, 0, 0)
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("4_432x2")]
@@ -34,3 +37,15 @@ position = Vector2(2304, 640)
 
 [node name="RoomC" parent="." instance=ExtResource("7_73eaf")]
 position = Vector2(2048, -1664)
+
+[node name="BackgroundBlueSky" parent="." instance=ExtResource("8_liu0f")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UIHealthBar" parent="CanvasLayer" instance=ExtResource("9_hlrxm")]
+offset_left = 60.0
+offset_top = 60.0
+offset_right = 378.0
+offset_bottom = 132.725
+
+[connection signal="health_changed" from="Player" to="CanvasLayer/UIHealthBar" method="_on_player_health_changed"]
