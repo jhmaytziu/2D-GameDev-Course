@@ -1,12 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://ci08dcfpqcyh0"]
 
-[ext_resource type="Texture2D" uid="uid://bniyrxn3r2v8h" path="res://assets/ship.png" id="1_ojfnv"]
-[ext_resource type="Script" path="res://Lesson/ship.gd" id="2_wtgej"]
+[ext_resource type="Texture2D" uid="uid://bniyrxn3r2v8h" path="res://assets/ship.png" id="1_v5gt4"]
+[ext_resource type="Script" path="res://Lesson/ship.gd" id="2_b02qy"]
 
 [node name="Sprite2D" type="Sprite2D"]
 position = Vector2(920, 529)
-texture = ExtResource("1_ojfnv")
-script = ExtResource("2_wtgej")
+texture = ExtResource("1_v5gt4")
+script = ExtResource("2_b02qy")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
