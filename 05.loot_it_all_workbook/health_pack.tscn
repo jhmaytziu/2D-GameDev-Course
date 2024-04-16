@@ -1,22 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://bsm55ui6l1vlv"]
+[gd_scene load_steps=4 format=3 uid="uid://dnj8oxsc3thn0"]
 
-[ext_resource type="Texture2D" uid="uid://dknpi2mq4dhpa" path="res://assets/health_icon.svg" id="1_4egmu"]
-[ext_resource type="Script" path="res://health_pack.gd" id="1_ywonh"]
+[ext_resource type="Script" path="res://health_pack.gd" id="1_h788v"]
+[ext_resource type="Texture2D" uid="uid://dknpi2mq4dhpa" path="res://assets/health_icon.svg" id="2_jmnrs"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_njkyw"]
-radius = 38.2099
+[sub_resource type="CircleShape2D" id="CircleShape2D_mqclp"]
+radius = 24.3516
 
 [node name="HealthPack" type="Area2D"]
-position = Vector2(1014, 598)
-script = ExtResource("1_ywonh")
+script = ExtResource("1_h788v")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(12.5, -15)
-scale = Vector2(1.52083, 1.625)
-texture = ExtResource("1_4egmu")
+position = Vector2(412, 198)
+texture = ExtResource("2_jmnrs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(13, -15)
-shape = SubResource("CircleShape2D_njkyw")
+position = Vector2(411, 199)
+shape = SubResource("CircleShape2D_mqclp")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

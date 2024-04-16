@@ -23,5 +23,6 @@ func _process(delta: float) -> void:
 		get_node("Sprite2D").rotation = velocity.angle()
 
 
-func _on_area_entered(area: Area2D) -> void:
-	pass
+func _on_area_entered(area_that_entered: Area2D) -> void:
+	energy += 20.0
+	get_node("UI/EnergyBar").value = energy
