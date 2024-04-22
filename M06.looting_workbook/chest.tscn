@@ -10,6 +10,7 @@
 size = Vector2(98, 84)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8x0eg"]
+resource_local_to_scene = true
 shader = ExtResource("1_n4ibm")
 shader_parameter/line_color = Color(1, 1, 0, 1)
 shader_parameter/line_thickness = 13.0
