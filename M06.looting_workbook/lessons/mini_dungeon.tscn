@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cit7gnkdckyux"]
+[gd_scene load_steps=13 format=3 uid="uid://cit7gnkdckyux"]
 
 [ext_resource type="Texture2D" uid="uid://114x1a0rmx4l" path="res://assets/dungeon/smooth_dungeon_tileset.png" id="1_sym7n"]
 [ext_resource type="Texture2D" uid="uid://cae527caaj50v" path="res://assets/dungeon/shadow_map.png" id="2_jthdw"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://l0y1k1obencd" path="res://assets/dungeon/spider_web.png" id="5_ywba7"]
 [ext_resource type="PackedScene" uid="uid://eundh35r605v" path="res://assets/torch/torch.tscn" id="6_fokey"]
 [ext_resource type="PackedScene" uid="uid://jyr4m5guwx6c" path="res://chest.tscn" id="7_mrxhe"]
+[ext_resource type="PackedScene" uid="uid://rn6y1sjn628n" path="res://sparrow.tscn" id="8_jfyv0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6s4s5"]
 texture = ExtResource("1_sym7n")
@@ -300,12 +301,6 @@ scale = Vector2(0.852123, 0.852123)
 texture = ExtResource("5_ywba7")
 flip_h = true
 
-[node name="Torch" parent="Background" instance=ExtResource("6_fokey")]
-position = Vector2(672, 128)
-
-[node name="Torch2" parent="Background" instance=ExtResource("6_fokey")]
-position = Vector2(480, 128)
-
 [node name="Camera2D" type="Camera2D" parent="Background"]
 position = Vector2(576, 235)
 rotation_smoothing_enabled = true
@@ -331,3 +326,18 @@ position = Vector2(380, 333)
 
 [node name="Chest3" parent="." instance=ExtResource("7_mrxhe")]
 position = Vector2(753, 339)
+
+[node name="Torch2" parent="." instance=ExtResource("6_fokey")]
+position = Vector2(657, 113)
+
+[node name="Torch" parent="." instance=ExtResource("6_fokey")]
+position = Vector2(489, 111)
+
+[node name="Sparrow" parent="." instance=ExtResource("8_jfyv0")]
+position = Vector2(663, 450)
+
+[node name="Sparrow2" parent="." instance=ExtResource("8_jfyv0")]
+position = Vector2(767, 241)
+
+[node name="Sparrow3" parent="." instance=ExtResource("8_jfyv0")]
+position = Vector2(387, 239)
